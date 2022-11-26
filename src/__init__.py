@@ -27,4 +27,4 @@ app.config['SWAGGER'] = {
 BASE_URL_API = '/api/kasir'
 
 
-db.create_all()
+#db.create_all()
