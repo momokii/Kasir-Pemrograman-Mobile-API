@@ -22,8 +22,9 @@ template = {
 
 
 swagger_config = {
-    "headers": [
-    ],
+    "headers": [{
+        "Allow-Control-Access-Origin": "*"
+    }],
     "specs": [
         {
             "endpoint": 'apispec',
