@@ -16,6 +16,7 @@ BASE_PATH_DOCS = "./docs/makanan"
 @makanan.get('')
 @swag_from(f'{BASE_PATH_DOCS}/makanan_get.yaml')
 def makanan_get():
+    request.access_control_request_headers
     page = request.args.get('page')
     per_page = request.args.get('per_page')
 
