@@ -1,0 +1,42 @@
+Edit Data Carts
+---
+tags:
+  - Carts
+
+parameters:
+  - name: Data Carts Baru
+    description : Data Makanan baru yang akan diinputkan ke carts yang sudah ada
+    in: body
+    required: required
+    schema:
+      type: object
+      required:
+        - "id"
+        - "pesanan_baru"
+      properties:
+        id:
+          type: int
+          example: 4
+          description: ID Carts ingin diubah
+
+        pesanan_baru:
+          type: int
+          description: Jumlah pesanan baru
+          example: 5
+
+
+
+
+responses:
+  200:
+    description: Berhasil Edit Data
+
+  404:
+    description: ID Carts ingin di edit tidak ditemukan
+
+  406:
+    description: Gagal, parameter tidak sesuai
+
+  500:
+    description: Gagal, format data dikirimkan bukan JSON
+

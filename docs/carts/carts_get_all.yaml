@@ -1,0 +1,11 @@
+Ambil semua data Carts
+---
+tags:
+  - Carts
+
+
+
+
+responses:
+  200:
+    description: Berhasil Ambil Data

@@ -1,0 +1,45 @@
+Tambah data carts
+---
+tags:
+  - Carts
+
+parameters:
+  - name: Data Makanan
+    description : Data makanan yang diinputkan ke dalam carts
+    in: body
+    required: required
+    schema:
+      type: object
+      required:
+        - "id"
+        - "jumlah_pesanan"
+      properties:
+        id:
+          type: int
+          example: 4
+          description: ID makanan yang akan ditambah ke carts
+
+        jumlah_pesanan:
+          type: int
+          description: Jumlah pesanan ditambahkan
+          example: 5
+
+
+
+
+responses:
+  201:
+    description: Berhasil Input ke Carts
+
+  404:
+    description: ID Makanan diinputkan tidak ditemukan
+
+  406:
+    description: Gagal, parameter tidak sesuai
+
+  409:
+    description: Gagal, data sudah ada di database
+
+  500:
+    description: Gagal, format data dikirimkan bukan JSON
+

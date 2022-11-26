@@ -1,0 +1,23 @@
+Ambil Data Makanan ( Semua/ Pagination )
+---
+tags:
+  - Makanan
+
+parameters:
+  - name: page
+    description: Halaman ke-n dicari
+    in: query
+    type: integer
+    required: false
+  - name: per_page
+    description: Satu halaman ada berapa data
+    in: query
+    type: integer
+    required: false
+
+
+
+responses:
+  200:
+    description: Data Makanan ada
+

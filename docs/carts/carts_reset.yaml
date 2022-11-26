@@ -1,0 +1,13 @@
+Hapus Seluruh data carts
+---
+tags:
+  - Carts
+
+
+
+responses:
+  200:
+    description: Berhasil Reset Data Carts
+
+  400:
+    description: ID Carts tidak ditemukan

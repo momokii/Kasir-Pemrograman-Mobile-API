@@ -1,0 +1,11 @@
+Ambil Semua Data Histori Transaksi
+---
+tags:
+  - Histori Transaksi
+
+
+
+responses:
+  200:
+    description: Data Histori Transaksi
+

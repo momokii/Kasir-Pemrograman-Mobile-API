@@ -1,0 +1,13 @@
+Melakukan proses transaksi dengan menghapus seluruh data carts dan memasukkan datanya sebagai transaksi ke histori transaksi
+---
+tags:
+  - Transaksi
+
+
+
+responses:
+  201:
+    description: Berhasil Buat Transaksi
+
+  400:
+    description: Gagal

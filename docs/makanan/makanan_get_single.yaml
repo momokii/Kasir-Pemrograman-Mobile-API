@@ -1,0 +1,22 @@
+Ambil Data Makanan (Single Data)
+---
+tags:
+  - Makanan
+
+parameters:
+  - name: id
+    description : ID Makanan yang dicari
+    in: path
+    type: integer
+    required: true
+
+
+
+
+responses:
+  200:
+    description: Data ditemukan
+
+  404:
+    description: ID makanan tidak ditemukan
+

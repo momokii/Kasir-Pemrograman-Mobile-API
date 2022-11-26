@@ -1,0 +1,52 @@
+Tambah user baru
+---
+tags:
+  - User
+
+parameters:
+  - name: Data User
+    description : Data User Baru
+    in: body
+    required: required
+    schema:
+      type: object
+      required:
+        - "username"
+        - "password"
+        - "password_konfir"
+        - "nama"
+      properties:
+        username:
+          type: string
+          example: username_saya
+          description: Username user baru
+
+        password:
+          type: string
+          description: Password user baru
+          example: "*******"
+
+        password_konfir:
+          type: string
+          description: Konfirmasi password akan digunakan pada user baru
+          example: "*******"
+
+        nama:
+          type: string
+          description: Nama user baru
+          example: Joko
+
+
+responses:
+  201:
+    description: Berhasil Add User Baru
+
+  406:
+    description: Gagal, parameter tidak sesuai
+
+  409:
+    description: Gagal, Password Konfirmasi tidak sesuai
+
+  500:
+    description: Gagal, format data dikirimkan bukan JSON
+

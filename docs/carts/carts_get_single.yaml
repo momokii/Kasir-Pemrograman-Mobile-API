@@ -1,0 +1,22 @@
+Ambil Data Carts (Single Data)
+---
+tags:
+  - Carts
+
+parameters:
+  - name: id_carts
+    description : ID Carts yang dicari
+    in: path
+    type: integer
+    required: true
+
+
+
+
+responses:
+  200:
+    description: Data ditemukan
+
+  404:
+    description: ID Data tidak ditemukan
+

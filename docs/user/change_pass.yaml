@@ -1,0 +1,55 @@
+Edit password user
+---
+tags:
+  - User
+
+parameters:
+  - name: Data User
+    description : Data user ingin ubah password
+    in: body
+    required: required
+    schema:
+      type: object
+      required:
+        - "username"
+        - "password"
+        - "password_baru"
+        - "konfir_password"
+      properties:
+        username:
+          type: string
+          example: username_saya
+          description: Username ingin ganti password
+
+        password:
+          type: string
+          description: Password usernam
+          example: "*******"
+
+        password_baru:
+          type: string
+          description: Password baru user
+          example: "*******"
+
+        konfir_password:
+          type: string
+          description: Password baru konfirmasi
+          example: "*******"
+
+
+responses:
+  200:
+    description: Berhasil Ubah Password
+
+  401:
+    description: Password username salah
+
+  404:
+    description: User tidak ditemukan
+
+  406:
+    description: Gagal, konfirmasi password baru tidak sesuai
+
+  500:
+    description: Gagal, format data dikirimkan bukan JSON
+

@@ -1,0 +1,43 @@
+Tambah data makanan
+---
+tags:
+  - Makanan
+
+parameters:
+  - name: Data Makanan
+    description : Data makanan yang diinputkan
+    in: body
+    required: required
+    schema:
+      type: object
+      required:
+        - "nama"
+        - "harga"
+        - "kategori"
+      properties:
+        nama:
+          type: string
+          example: Bakso
+          description: Nama makanan
+
+        harga:
+          type: int
+          description: Harga makanan dalam Rp.
+          example: 12500
+
+        kategori:
+          type: string
+          description: Kategori Makanan yang diinputkan
+          example: Minuman
+
+
+responses:
+  201:
+    description: Berhasil Input, Tampilkan data yang baru saja diinputkan
+
+  406:
+    description: Gagal, parameter tidak sesuai
+
+  500:
+    description: Gagal, format data dikirimkan bukan JSON
+

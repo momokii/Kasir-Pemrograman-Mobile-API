@@ -1,0 +1,43 @@
+Login User
+---
+tags:
+  - User
+
+parameters:
+  - name: Data User
+    description : Data user untuk login
+    in: body
+    required: required
+    schema:
+      type: object
+      required:
+        - "username"
+        - "password"
+      properties:
+        username:
+          type: string
+          example: username_saya
+          description: Username password sudah terdaftar
+
+        password:
+          type: string
+          description: Password User
+          example: "******"
+
+
+responses:
+  202:
+    description: Berhasil Login
+
+  401:
+    description: Password Salah
+
+  404:
+    description: Username tidak ditemukan
+
+  406:
+    description: Gagal, parameter tidak sesuai
+
+  500:
+    description: Gagal, format data dikirimkan bukan JSON
+

@@ -1,0 +1,52 @@
+Edit data makanan sudah ada berdasar input id yang diberikan
+---
+tags:
+  - Makanan
+
+parameters:
+  - name: Data Makanan Baru
+    description : Data makanan yang diinputkan
+    in: body
+    required: required
+    schema:
+      type: object
+      required:
+        - "id"
+        - "nama_edit"
+        - "harga_edit"
+        - "kategori_edit"
+      properties:
+        id:
+          type: int
+          example: 1
+          description: ID makanan yang akan diedit
+
+        nama_edit:
+          type: string
+          example: Bakso
+          description: Nama makanan
+
+        harga_edit:
+          type: int
+          description: Harga makanan dalam Rp.
+          example: 12500
+
+        kategori_edit:
+          type: string
+          description: Kategori Makanan yang diinputkan
+          example: Minuman
+
+
+responses:
+  200:
+    description: Berhasil Edit Makanan
+
+  404:
+    description: Data ID makanan dicari tidak ditemukan
+
+  406:
+    description: Gagal, parameter tidak sesuai
+
+  500:
+    description: Gagal, format data dikirimkan bukan JSON
+

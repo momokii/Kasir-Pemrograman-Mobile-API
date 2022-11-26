@@ -1,0 +1,40 @@
+Edit Informasi User
+---
+tags:
+  - User
+
+parameters:
+  - name: Data User
+    description : Data User Baru
+    in: body
+    required: required
+    schema:
+      type: object
+      required:
+        - "username"
+        - "nama_baru"
+      properties:
+        username:
+          type: string
+          example: username_saya
+          description: Username user diedit
+
+        nama_baru:
+          type: string
+          description: Nama baru user
+          example: Joko Susilo
+
+
+responses:
+  202:
+    description: Berhasil Edit User
+
+  404:
+    description: Gagal, Username tidak ditemukan
+
+  406:
+    description: Gagal, parameter tidak sesuai
+
+  500:
+    description: Gagal, format data dikirimkan bukan JSON
+

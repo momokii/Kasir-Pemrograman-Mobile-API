@@ -1,0 +1,35 @@
+Hapus data carts
+---
+tags:
+  - Carts
+
+parameters:
+  - name: Data Carts
+    description : Data Carts akan dihapus
+    in: body
+    required: required
+    schema:
+      type: object
+      required:
+        - "id"
+      properties:
+        id:
+          type: int
+          example: 4
+          description: ID Carts ingin dihapus
+
+
+
+responses:
+  200:
+    description: Berhasil Hapus data
+
+  404:
+    description: ID Carts tidak ditemukan
+
+  406:
+    description: Gagal, parameter tidak sesuai
+
+  500:
+    description: Gagal, format data dikirimkan bukan JSON
+
