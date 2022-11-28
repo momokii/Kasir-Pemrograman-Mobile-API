@@ -17,7 +17,7 @@ db = SQLAlchemy(app)
 
 app.config['SECRET_KEY'] = 'pemrogramanmobiledapeta'
 app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///kasir.db"
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['SQLALCHEMY_TRACK_MODIFICATION'] = False
 app.config['SWAGGER'] = {
     'title' : 'Kasir REST API Pemrograman Mobile',
     'uiversion' : 3
