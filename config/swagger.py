@@ -1,16 +1,16 @@
 template = {
     "swagger": "2.0",
     "info": {
-        "title": "Kasir REST API Pemrograman Mobile ",
+        "title": "REST API Kasir Pemrograman Mobile",
         "description": "API untuk projek pemrograman mobile",
         "contact": {
             "responsibleOrganization": "",
             "responsibleDeveloper": "",
             "email": "kelanachandra7@gmail.com",
-            "url": "https://kelanach.herokuapp.com/",
+            "url": "https://kasir-api-project-mobile.herokuapp.com/",
             "github" : "https://github.com/momokii/"
         },
-        "termsOfService": "https://github.com/momokii/REST-API-Project-1",
+        "termsOfService": "https://github.com/momokii/Kasir-Pemrograman-Mobile-API",
         "version": "1.0"
     },
     "basePath": "/api/kasir",  # base bash for blueprint registration
