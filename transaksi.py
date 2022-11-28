@@ -1,5 +1,3 @@
-import requests
-
 from src import *
 from model import *
 from carts import carts_get_all
@@ -70,7 +68,7 @@ def transaksi():
 @histori.get('/histori')
 @swag_from(f'{BASE_PATH_DOCS}/transaksi_histori_get.yaml')
 def histori_transaksi_get():
-
+    request.access_control_request_headers
     all_transaksi = HistoriTransaksi.query.all()
     transaksi_list = []
     for transaki in all_transaksi:

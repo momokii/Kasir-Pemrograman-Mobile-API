@@ -1,5 +1,3 @@
-import requests
-
 from src import *
 from model import *
 

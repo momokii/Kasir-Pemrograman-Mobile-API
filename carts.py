@@ -14,7 +14,7 @@ BASE_PATH_DOCS = './docs/carts'
 @carts.get('')
 @swag_from(f'{BASE_PATH_DOCS}/carts_get_all.yaml')
 def carts_get_all():
-
+    request.access_control_request_headers
     carts_all = Carts.query.all()
     carts_list = []
     total_pesanan = 0
@@ -48,7 +48,7 @@ def carts_get_all():
 @carts.get('/<id_carts>')
 @swag_from(f'{BASE_PATH_DOCS}/carts_get_single.yaml')
 def carts_get_single(id_carts):
-
+    request.access_control_request_headers
     carts = Carts.query.get(id_carts)
     if carts:
         json_return = jsonify(carts.get_carts_data()), HTTP_200_OK

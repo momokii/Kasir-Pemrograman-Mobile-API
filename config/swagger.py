@@ -13,7 +13,7 @@ template = {
         "termsOfService": "https://github.com/momokii/REST-API-Project-1",
         "version": "1.0"
     },
-    "basePath": "/api",  # base bash for blueprint registration
+    "basePath": "/api/kasir",  # base bash for blueprint registration
     "schemes": [
         "http",
         "https"
@@ -22,8 +22,7 @@ template = {
 
 
 swagger_config = {
-    "headers": [
-    ],
+    "headers": [],
     "specs": [
         {
             "endpoint": 'apispec',
