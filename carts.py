@@ -85,8 +85,8 @@ def carts_tambah():
 
                 else:
                     carts_data = Carts(
-                        makanan = int(makanan_tambah),
-                        _pesanan = data['jumlah_pesanan']
+                        makanan = makanan_tambah,
+                        _pesanan = int(data['jumlah_pesanan'])
                     )
 
                     db.session.add(carts_data)
