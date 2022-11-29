@@ -127,7 +127,7 @@ def carts_edit():
             carts_edited = Carts.query.get(data['id'])
             if carts_edited:
 
-                carts_edited._pesanan = data['pesanan_baru']
+                carts_edited._pesanan = int(data['pesanan_baru'])
                 db.session.commit()
 
                 json_return = jsonify(
