@@ -85,7 +85,7 @@ def carts_tambah():
 
                 else:
                     carts_data = Carts(
-                        makanan = makanan_tambah,
+                        makanan = int(makanan_tambah),
                         _pesanan = data['jumlah_pesanan']
                     )
 
