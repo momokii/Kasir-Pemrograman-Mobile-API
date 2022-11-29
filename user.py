@@ -83,14 +83,16 @@ def user_add():
                     db.session.add(new_user)
                     db.session.commit()
 
-                    json_return = jsonify(
-                        success = f"Berhasil buat akun, username : {username}"
-                    ), HTTP_201_CREATED
+                    json_return = jsonify({
+                        "status" : "success",
+                        "success" : f"Berhasil buat akun, username : {username}"
+                      }), HTTP_201_CREATED
 
                 else:
-                    json_return = jsonify(
-                        error = "Gagal, password konfirmasi tidak sesuai"
-                    ), HTTP_409_CONFLICT
+                    json_return = jsonify({
+                        "status" : "error" ,
+                        "error" : "Gagal, password konfirmasi tidak sesuai"
+                    }), HTTP_409_CONFLICT
 
         except KeyError:
             json_return = wrong_parameter_input()
