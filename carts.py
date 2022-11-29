@@ -79,9 +79,10 @@ def carts_tambah():
             if makanan_tambah:
 
                 if Carts.query.filter_by(id_makanan = data['id']).first():
-                    json_return = jsonify(
-                        error = f"Barang : {makanan_tambah.nama} sudah ada di carts"
-                    ), HTTP_409_CONFLICT
+                    json_return = jsonify({
+                        "error" : f"Barang : {makanan_tambah.nama} sudah ada di carts",
+                        "status" : "error"
+                    }), HTTP_409_CONFLICT
 
                 else:
                     carts_data = Carts(
@@ -91,9 +92,10 @@ def carts_tambah():
 
                     db.session.add(carts_data)
                     db.session.commit()
-                    json_return = jsonify(
-                        success = "Berhasil tambah barang ke carts"
-                    ), HTTP_201_CREATED
+                    json_return = jsonify({
+                        "success" : "Berhasil tambah barang ke carts",
+                        "status" : "success"
+                    }), HTTP_201_CREATED
 
             else:
                 json_return = jsonify(
